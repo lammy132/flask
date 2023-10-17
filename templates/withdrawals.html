@@ -1,0 +1,28 @@
+<!-- admin/withdrawals.html -->
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>User</th>
+            <th>Amount (USDT)</th>
+            <th>Wallet Address</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for withdrawal_request in withdrawal_requests %}
+        <tr>
+            <td>{{ withdrawal_request.id }}</td>
+            <td>{{ withdrawal_request.user.username }}</td>
+            <td>{{ withdrawal_request.amount }}</td>
+            <td>{{ withdrawal_request.wallet_address }}</td>
+            <td>{{ withdrawal_request.status }}</td>
+            <td>
+                <a href="{{ url_for('approve_withdrawal', withdrawal_id=withdrawal_request.id) }}">Approve</a>
+                <a href="{{ url_for('reject_withdrawal', withdrawal_id=withdrawal_request.id) }}">Reject</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

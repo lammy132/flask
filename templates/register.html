@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Rand Cryptos|Register</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/jquery.mCustomScrollbar.min.css') }}">
+
+    <!-- Tweaks for older IEs-->
+    <!--[if lt IE 9]>
+        <script src="{{ url_for('static', filename='/js/jquery.min.js') }}"></script>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="static/images/loading.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="head-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <div class="email"> <a href="#">Email : info@randvest.xyz</a> </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <div class="icon"> <i> <a href="#"><img src="static/icon/facebook.png"></a></i> <i> <a href="#"><img src="static/icon/Twitter.png"></a></i> <i> <a href="#"><img src="static/icon/linkedin.png"></a></i> <i> <a href="#"><img src="static/icon/google+.png"></a></i> </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <div class="contact"> <a href="#">Contact :  +1 (332)2542936 </a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                    <div class="full">
+                        <div class="center-desk">
+                            <div class="logo"> <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='/images/logo.jpg') }}" alt="#"></a> </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                    <div class="menu-area">
+                        <div class="limit-box">
+                            <nav class="main-menu">
+                                <ul class="menu-area-main">
+                                    <li> <a href="{{ url_for('index') }}">Home</a> </li>
+                                    <li> <a href="{{ url_for('about_us') }}">About</a> </li>
+                                    <li> <a href="{{ url_for('about_us') }}">About</a> </li>
+                                    <li> <a href="{{ url_for('Currency') }}">Invest</a> </li>
+                                    <li> <a href="{{ url_for('team') }}">Team</a> </li>
+                                    <li> <a href="{{ url_for('contact_us') }}">Contact us</a> </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end header inner -->
+    </header>
+    <!-- end header -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <!-- Adjust the column width as needed -->
+                <h1>Register</h1><br>
+
+                                 <form method="POST" action="/register">
+                                     <div class="form-group">
+                                         <label for="username"><strong>Username:</strong></label>
+                                         <input type="text" class="form-control" id="username" name="username" required>
+                                     </div>
+
+                                     <div class="form-group">
+                                         <label for="password"><strong>Password:</strong></label>
+                                         <input type="password" class="form-control" id="password" name="password" required>
+                                     </div>
+
+                                     <div class="form-group">
+                                         <label for="DateOfBirth"><strong>Date of Birth:</strong></label>
+                                         <input type="date" class="form-control" id="DateOfBirth" name="Date_of_Birth" required>
+                                     </div>
+
+                                     <div class="form-group">
+                                         <label for="PhoneNumber"><strong>Phone:</strong></label>
+                                         <input type="tel" class="form-control" id="PhoneNumber" name="Phone_Number" required>
+                                     </div>
+                                     <div class="form-group">
+                                         <label for="Email"><strong>Email:</strong></label>
+                                         <input type="email" class="form-control" id="email" name="email" required>
+                                     </div>
+                                     <div class="form-group">
+                                         <label for="Referral Code"><strong>Referral Code:</strong></label>
+                                         <input type="text" name="referral_code" placeholder="Referral Code (Optional)">
+                                     </div>
+
+                                     <div class="form-group">
+                                         <strong>Gender:</strong><br>
+                                         <input type="radio" id="male" name="gender" value="male">
+                                         <label for="male">Male</label>
+
+                                         <input type="radio" id="female" name="gender" value="female">
+                                         <label for="female">Female</label>
+
+                                         <input type="radio" id="other" name="gender" value="other">
+                                         <label for="other">Other</label>
+                                     </div>
+
+                                     <button class="btn btn-primary" type="submit">Register</button>
+                                 </form><br>
+
+                <p><em>Already have an account?</em> <a href="login">Login</a></p><br>
+            </div>
+        </div>
+    </div><!-- footer -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                        <div class="Contact">
+                            <h3>Contact Us</h3>
+                            <ul class="contant_icon">
+                                <li> <a href="#"><img src="static/icon/location.png"></a></li>
+                                <li> <a href="#"><img src="static/icon/tellephone.png"></a></li>
+                                <li> <a href="#"><img src="static/icon/email.png"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                        <div class="Social">
+                            <h3>Social links</h3>
+                            <ul class="socil_link">
+                                <li><a href="#"><img src="static/icon/fb.png"></a></li>
+                                <li><a href="#"><img src="static/icon/Tw.png"></a></li>
+                                <li> <a href="#"><img src="static/icon/lin.png"></a></li>
+                                <li> <a href="#"><img src="static/icon/insta.png"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                        <div class="newsletter">
+                            <h3>newsletter</h3>
+                            <input class="new" placeholder="Enter your email" type="email">
+                            <button class="subscribe">subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>Copyright 2019 All Right Reserved By <a href="#"> Rand Cryptos Investment</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/jquery-3.0.0.min.js"></script>
+    <script src="static/js/plugin.js"></script>
+
+    <!-- sidebar -->
+    <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="static/js/custom.js"></script>
+</body>
+</html>
